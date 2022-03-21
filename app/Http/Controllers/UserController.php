@@ -8,7 +8,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return 'Usuarios';
+        $users = ['Gilmar', 'Juan', 'Maria', 'Natalia', '<script>alert("hola")</script>'];
+        return view('users', ['users' => $users, 'title' => 'Listado de Usuarios']);
     }
 
     public function show($id)
